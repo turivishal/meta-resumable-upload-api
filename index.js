@@ -31,7 +31,7 @@ const upload = multer({
 app.use('/uploadMedia', async (req, res) => {
     // UPLOAD
     upload.single('file')(req, res, async (error) => {
-        // PROPABLY FILE SIZE ERROR
+        // PROBABLY FILE SIZE ERROR
         if (error instanceof multer.MulterError) {
             // LOG ERROR, AND RESPONSE
             console.error(error);
@@ -56,7 +56,7 @@ app.use('/uploadMedia', async (req, res) => {
         }
         else {
             // CREATE SESSION
-            let session = await WAHelper.createResumableUploadSession({
+            let session = await WAHelper.RUCreateSession({
                 file_length: req.file.size,
                 file_name: req.file.originalname,
                 file_type: req.file.mimetype
@@ -69,7 +69,7 @@ app.use('/uploadMedia', async (req, res) => {
                 });
             }
             //INITIATE UPLOAD
-            let iupload = await WAHelper.initiateResumableUploadSession(session.body.id, req.file.buffer);
+            let iupload = await WAHelper.RUInitiateUpload(session.body.id, req.file.buffer);
             if (iupload.body.h) {
                 // SUCCESS RESPONSE
                 console.error(iupload.body);

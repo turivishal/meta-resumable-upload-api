@@ -6,7 +6,7 @@ const got = require("got");
  * https://developers.facebook.com/docs/graph-api/reference/whats-app-business-account/message_templates/
  */
 // RESUMABLE UPLOAD - CREATE SESSION
-exports.createResumableUploadSession = (body) => {
+exports.RUCreateSession = (body) => {
     try {
         return got.post([process.env.META_API_URI, process.env.META_APP_ID, "uploads"].join("/"), { 
             headers: { 
@@ -28,7 +28,7 @@ exports.createResumableUploadSession = (body) => {
  * https://developers.facebook.com/docs/graph-api/reference/whats-app-business-account/message_templates/
  */
 // RESUMABLE UPLOAD - INITIATE UPLOAD
-exports.initiateResumableUploadSession = (uploadSessionId, body) => {
+exports.RUInitiateUpload = (uploadSessionId, body) => {
     try {
         return got.post([process.env.META_API_URI, uploadSessionId].join("/"), { 
             headers: { 
