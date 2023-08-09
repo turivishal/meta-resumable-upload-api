@@ -31,7 +31,7 @@ node index.js
 curl --location 'http://localhost:2002/uploadMedia' \
 --form 'file=@"/path to media"'
 ```
-# Response:
+#### Response:
 ```
 {
     "message": "Uploaded!",
@@ -40,8 +40,8 @@ curl --location 'http://localhost:2002/uploadMedia' \
     }
 }
 ```
-# This is a request and response 
-![Alt text](image.png)
+#### This is a request and response 
+![259396102-b6c518a5-3245-4bd5-9363-f3af318e6804](https://github.com/turivishal/meta-resumable-upload-api/assets/10988772/312fb5bf-9060-4e97-8d09-eb7c2eda3fe4)
 
 ## 7. Create Template
 ```
@@ -68,7 +68,7 @@ curl --location 'http://localhost:2002/createTemplate' \
   ]
 }'
 ```
-# Response:
+#### Response:
 ```
 {
     "message": "Template Created!",
@@ -79,5 +79,5 @@ curl --location 'http://localhost:2002/createTemplate' \
     }
 }
 ```
-# This is a request and response 
-![Alt text](image.png)
+#### This is a request and response 
+![259397683-c36d9cce-9fc8-4840-bcfc-b13287ed33dd](https://github.com/turivishal/meta-resumable-upload-api/assets/10988772/e4d95e61-89d5-4c8b-a4d9-e369dca62169)
