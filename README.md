@@ -83,3 +83,6 @@ curl --location 'http://localhost:2002/createTemplate' \
 ```
 #### This is a request and response 
 ![259397683-c36d9cce-9fc8-4840-bcfc-b13287ed33dd](https://github.com/turivishal/meta-resumable-upload-api/assets/10988772/e4d95e61-89d5-4c8b-a4d9-e369dca62169)
+
+## Reference
+https://developers.facebook.com/docs/graph-api/guides/upload/
