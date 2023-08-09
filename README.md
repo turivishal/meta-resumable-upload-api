@@ -1,7 +1,7 @@
-# meta-resumable-upload-api
+# Meta's Resumable Upload API
 Meta's Resumable API with Node.JS
 
-## 1. Clone repo and move to the project directory
+## 1. Clone the repo and move it to the project directory
 
 ## 2. Update your credentials in .env
 ```
@@ -26,7 +26,8 @@ npm install
 node index.js
 ```
 
-## 6. Upload media using resumable upload api, Use Postman or any API explorer
+## 6. Upload media using resumable upload API
+Use Postman or any API explorer, Select your media file for upload
 ```
 curl --location 'http://localhost:2002/uploadMedia' \
 --form 'file=@"/path to media"'
@@ -44,6 +45,7 @@ curl --location 'http://localhost:2002/uploadMedia' \
 ![259396102-b6c518a5-3245-4bd5-9363-f3af318e6804](https://github.com/turivishal/meta-resumable-upload-api/assets/10988772/312fb5bf-9060-4e97-8d09-eb7c2eda3fe4)
 
 ## 7. Create Template
+Put the uploaded media code in `header_handle` from the above API's response
 ```
 curl --location 'http://localhost:2002/createTemplate' \
 --header 'Content-Type: application/json' \
